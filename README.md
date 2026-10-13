@@ -17,7 +17,14 @@ Conceptual:
 
 Specification:
 
+For the graph $G$:
 
+- It is a directed acyclic graph
+
+
+For the collection $P$ of paths through the network.:
+
+- We use a ...
 
 
 Computation Model:
