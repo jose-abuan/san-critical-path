@@ -4,22 +4,22 @@
 #include <string>
 
 class SANGraph{
-    private:
+     public:
+        SANGraph();
         struct Edge{
             double upperBoundWeight_;
             int destinationNode;     
-        };   
-        std::vector<std::vector<Edge>> adjList; 
-        std::vector<Edge> paths;
-        int sourceNode_ = 1;
-        int sinkNode_ = 0;
-
-    public:
-        SANGraph();
+        };
         void parseFile(std::string &filename);
-        void findAllPaths();
+        std::vector<std::vector<Edge>> findAllPaths();
         void dfsHelper(int currentNode, std::vector<Edge> &currentPath, std::vector<std::vector<Edge>> &allPaths);
 
+    private:   
+        std::vector<std::vector<Edge>> adjList; 
+        std::vector<Edge> paths;
+        const int sourceNode_ = 1; // Source node will always be 1
+        int terminalNode_ = 0;
+   
 };
 
 #endif
