@@ -8,9 +8,9 @@
 using namespace std;
 
 int main(int argc, char* argv[]){
-
-    Simulator sim;
     SANGraph G;
+    Simulator sim = new Simulator(G, argc[2], argc[2]);
+    
 
     G.parseFile(std::string &argv[1]);
     vector<vector<SANGraph::Edge>> allPaths = G.findAllPaths();

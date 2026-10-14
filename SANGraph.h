@@ -6,6 +6,7 @@
 class SANGraph{
      public:
         SANGraph();
+        ~SANGraph();
         struct Edge{
             double upperBoundWeight_;
             int destinationNode;     
